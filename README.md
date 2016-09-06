@@ -11,10 +11,9 @@ Copy Rakefile to your work directory and modify parameters by your environment:
 
 for Mac user, needs packages below:
 
-* poppler-utils
-* poppler-data
+* poppler --with-glib
 * imagemagick
-* pdftk
+* pdftk (pkg)
 * sips
 
 ----
@@ -32,7 +31,7 @@ PDFファイルごとにRakefileをコピーして、以下の値を書き換え
 
 *  SRC (必須): 最適化元のPDFファイル
 *  TOP, BOTTOM, LEFT, RIGHT: あらかじめカットしておく領域(ピクセル)
-*  SIZE: Kindleを縦持ち(portrate)にして読むか横持ち(landscape)にして読むか
+*  SIZE: Kindleを縦持ち(portrait)にして読むか横持ち(landscape)にして読むか
 *  LEVEL (optional): ImageMagicのlevelオプション。地の紙に色が付いている場合に
 
 以下の環境変数を指定すると、それぞれフェーズ2(ppm→pngを行うconvertコマンド)~~とフェーズ3(png→pdfを行うsam2pコマンド)~~にオプションを追加できます:
@@ -69,4 +68,3 @@ CropBoxを使っているかどうかは、エディタ等でPDFファイルを�
 cropbox.rb内のOFFSETを調整して以下のように実行すると、指定したサイズ分だけ余白を切り取ったPDFファイルへ変換できます:
 
     % ./cropbox.rb 元のPDF > 変換後のPDF
-
