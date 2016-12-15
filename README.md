@@ -11,7 +11,7 @@ Copy Rakefile to your work directory and modify parameters by your environment:
 
 for Mac user, needs packages below:
 
-* poppler --with-glib
+* poppler
 * imagemagick
 * pdftk (pkg)
 * sips
